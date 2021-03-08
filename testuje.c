@@ -86,13 +86,12 @@ void poka()
                 {
                         if(tab[i][j] == 1)
                         {
-                                printf("\u25a0");
-                                printf(" ");
+                                printf("\u2b1c");
                         }
 
                         if(tab[i][j] == 0)
                         {
-                                printf("\u25a1 ");
+                                printf("\u2b1b");
                         }
                 }
 		
