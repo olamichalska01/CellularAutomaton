@@ -80,6 +80,9 @@ void poka()
 {
 	system("clear");
 
+
+
+
 	for(int i = 0; i < W; i ++)
         {
                 for(int j = 0; j < K; j ++)
