@@ -13,7 +13,7 @@
 #define _filesize _pixelbytesize+sizeof(bitmap)
 #define _xpixelpermeter 0x130B //2835 , 72 DPI
 #define _ypixelpermeter 0x130B //2835 , 72 DPI
-#define pixel 0xFF
+#define pixel 0xF0F8FF
 
 #pragma pack(push,1)
 
