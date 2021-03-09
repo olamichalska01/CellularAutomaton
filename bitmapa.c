@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <string.h>
 #include <malloc.h>
+
 #define _height 600
 #define _width 800
 #define _bitsperpixel 24
@@ -13,13 +14,16 @@
 #define _xpixelpermeter 0x130B //2835 , 72 DPI
 #define _ypixelpermeter 0x130B //2835 , 72 DPI
 #define pixel 0xFF
+
 #pragma pack(push,1)
+
 typedef struct{
     uint8_t signature[2];
     uint32_t filesize;
     uint32_t reserved;
     uint32_t fileoffset_to_pixelarray;
 } fileheader;
+
 typedef struct{
     uint32_t dibheadersize;
     uint32_t width;
@@ -33,17 +37,23 @@ typedef struct{
     uint32_t numcolorspallette;
     uint32_t mostimpcolor;
 } bitmapinfoheader;
+
 typedef struct {
     fileheader fileheader;
     bitmapinfoheader bitmapinfoheader;
 } bitmap;
+
 #pragma pack(pop)
 
 int main (int argc , char *argv[]) {
     FILE *fp = fopen("test.bmp","wb");
+    
     bitmap *pbitmap  = (bitmap*)calloc(1,sizeof(bitmap));
+    
     uint8_t *pixelbuffer = (uint8_t*)malloc(_pixelbytesize);
+    
     strcpy(pbitmap->fileheader.signature,"BM");
+    
     pbitmap->fileheader.filesize = _filesize;
     pbitmap->fileheader.fileoffset_to_pixelarray = sizeof(bitmap);
     pbitmap->bitmapinfoheader.dibheadersize =sizeof(bitmapinfoheader);
@@ -56,12 +66,16 @@ int main (int argc , char *argv[]) {
     pbitmap->bitmapinfoheader.ypixelpermeter = _ypixelpermeter ;
     pbitmap->bitmapinfoheader.xpixelpermeter = _xpixelpermeter ;
     pbitmap->bitmapinfoheader.numcolorspallette = 0;
+    
     fwrite (pbitmap, 1, sizeof(bitmap),fp);
     memset(pixelbuffer,pixel,_pixelbytesize);
     fwrite(pixelbuffer,1,_pixelbytesize,fp);
+    
     fclose(fp);
     free(pbitmap);
     free(pixelbuffer);
+    
+    return 0;
 }
 
 
