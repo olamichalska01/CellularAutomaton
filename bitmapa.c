@@ -51,7 +51,21 @@ int main(int argc, char **argv)
 	pbitmap -> fileheader.filesize = _filesize;
 	pbitmap -> fileheader.fileoffset_to_pixelarray = sizeof(bitmap);
 	pbitmap -> bitmapinfoheader.dibheadersize = sizeof(bitmapinfoheader);
-	
+	pbitmap->bitmapinfoheader.width = _width;
+   	 pbitmap->bitmapinfoheader.height = _height;
+   	 pbitmap->bitmapinfoheader.planes = _planes;
+   	 pbitmap->bitmapinfoheader.bitsperpixel = _bitsperpixel;
+   	 pbitmap->bitmapinfoheader.compression = _compression;
+   	 pbitmap->bitmapinfoheader.imagesize = _pixelbytesize;
+   	 pbitmap->bitmapinfoheader.ypixelpermeter = _ypixelpermeter ;
+   	 pbitmap->bitmapinfoheader.xpixelpermeter = _xpixelpermeter ;
+   	 pbitmap->bitmapinfoheader.numcolorspallette = 0;
+   	 fwrite (pbitmap, 1, sizeof(bitmap),fp);
+   	 memset(pixelbuffer,pixel,_pixelbytesize);
+   	 fwrite(pixelbuffer,1,_pixelbytesize,fp);
+  	  fclose(fp);
+   	 free(pbitmap);
+   	 free(pixelbuffer);
 	
 	return 0;
 }
