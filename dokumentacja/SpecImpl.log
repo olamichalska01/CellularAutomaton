@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 13:46
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 16:18
+>>>>>>> 12a10893597aa22fb6591c5c61f99735b2ca093c
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -158,16 +162,31 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.95886pt too wide) in paragraph at lines 65--69
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./SpecImpl.toc
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+))
+\tf@toc=\write3
+\openout3 = `SpecImpl.toc'.
+
+ [1]
+Overfull \hbox (0.95886pt too wide) in paragraph at lines 67--71
  \T1/cmr/m/n/10 W mo-du-le gªów-nym, da-lej \T1/cmr/m/it/10 Ma-in\T1/cmr/m/n/10
  , zo-sta-ªa za-im-ple-men-to-wa-na pod-sta-wo-wa cz¦±¢
  []
 
-[1] 
+[2] [3] [4] [5] 
 AED: lastpage setting LastPage
-[2] (./SpecImpl.aux) ) 
+[6] (./SpecImpl.aux) ) 
 Here is how much of TeX's memory you used:
+<<<<<<< HEAD
  2371 strings out of 483148
  31966 string characters out of 5965417
  265512 words of memory out of 5000000
@@ -186,9 +205,31 @@ ecrm2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
 ctt2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
 bx2488.600pk>
 Output written on SpecImpl.pdf (3 pages, 77987 bytes).
+=======
+ 2410 strings out of 483148
+ 32540 string characters out of 5965417
+ 267512 words of memory out of 5000000
+ 17409 multiletter control sequences out of 15000+600000
+ 541852 words of font info for 44 fonts, out of 8000000 for 9000
+ 34 hyphenation exceptions out of 8191
+ 30i,10n,45p,332b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jk
+nappen/ec/tcrm1000.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour
+/jknappen/ec/ecti1000.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecbx1200.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/
+ljfour/jknappen/ec/ecbx1000.600pk> </home/natalia/.texlive2019/texmf-var/fonts/
+pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/natalia/.texlive2019/texmf-var/fon
+ts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/natalia/.texlive2019/texmf-var/
+fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/natalia/.texlive2019/texmf-v
+ar/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/natalia/.texlive2019/texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk> </home/natalia/.texlive2019/t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ectt2488.600pk> </home/natalia/.texlive201
+9/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk>
+Output written on SpecImpl.pdf (7 pages, 107632 bytes).
+>>>>>>> 12a10893597aa22fb6591c5c61f99735b2ca093c
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 372 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
