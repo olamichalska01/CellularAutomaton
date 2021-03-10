@@ -17,15 +17,59 @@
 
 \subsection{Opis dokumentu}
 
-\quad Dany dokument koresponduje z poprzedni\k{a} specyfikacj\k{a} funkcjonaln\k{a}
+\quad Dany dokument koresponduje z poprzedni\k{a} specyfikacj\k{a} - Secyfikacj\k{a} funkcjonaln\k{a}
 
 \subsection{\'Srodowisko implementacyje}
 \quad Docelowa gra zosta\l{}a napisana w \'srodowiskach Linuxowych, w j\k{e}zyku C. 
 
 
-\section{Opis modu\l{}\'ow}
+\subsection{Informacje o wy\'swietlanych generacjach}
+
+\quad Wy\'swietlana posta\'c generacji zosta\l{}a utowrzona z dwukolorowych kwadra\'ow. 
+Stan \.zywy kom\'orki zosta\l{} oznaczony bia\l{}ym kolorem, natomiast stan martwy kolorem czarnym. 
+Kolorowe kwadraty zosta\l{}y wy\'swietlone przy pomocy Unicodu, \.zywa - u2b1c, martwa - u2b1b. 
+
+\section{Opis modu\l{}\'ow - kr\'otki}
+
+\subsection{Main}
+
+\quad W module g\l{}\'ownym, dalej \textit{Main}, zosta\l{}a zaimplementowana podstawowa cz\k{e}\'s\'c programu. 
+Mo\.za tam odczyta\'c posta\'c struktury pojedy\'nczej \textit{generacji}. 
+\textit{Main} odpowiada za obs\l{}ug\k{e} parametr\'ow, czytanie pliku wej\'sciowego oraz zapis ko\'ncowej genracji, a tak\.ze uruchomienie odpowiedniego trybu programu (SBS, FAST). 
+Modu\l{} g\l{}\'owny nawi\k{a}zuje do modu\l{}u \textit{Modes}.  
+
+\subsection{Modes}
+
+\quad W danym module zosta\l{}y zaimplementowne funkcje obs\l{}ugi poszczeg\'olnych tryb\'ow. 
+Nawi\k{a}zuje on do modu\l{}\'ow \textit{SaveImage} oraz \textit{CreateNew}. 
+
+\subsection{SaveImage}
+
+\quad W tej cz\k{e}\'sci programu zosta\l{}y utworzone funkcje zapisu danej \textit{generacji} do postaci obrazu. 
+Dany modu\l{} nie korzysta z \.zanych innych modu\l{}\'ow.
+
+\subsection{CreateNew}
+
+\quad W module znajduje si\k{e} funkcja tworz\k{a}ca now\k{a} \textit{generacje}, wed\l{}ug zasad opisanych r\'ownie\.z w danym module.
+Nawi\k{a}zuje do modu\l{}u \textit{HelpCreate}.
+
+\subsection{HelpCreate}
+
+\quad W tym module zosta\l{}y zaimplementowane funkcje pomocnicze przy tworzeniu nowej \textit{generacji}.
+Nawi\k{a}zuje do modu\l{}u \textit{Neighbor}.
+
+\subsection{Neighbor}
+
+\quad W tej cz\k{e}\'sci napisane zosta\l{}y funkcje potrzebne do sprawdzania liczby s\k{a}siad\'ow pojedy\'nczej kom\'orki.
+Ten modu\l{} nie powo\l{}uje si\k{e} na inne modu\l{}y.
+
+\section{Opis modu\l{}\'ow - szczeg\'o\l{}owy}
 
 
+\section{Testowanie}
+
+
+\section{Diagram modu\l{}\'ow}
 
 
 \end{document}

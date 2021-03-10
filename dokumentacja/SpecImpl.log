@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  9 MAR 2021 18:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -88,27 +88,33 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 13.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] (./SpecImpl.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (0.95886pt too wide) in paragraph at lines 36--40
+ \T1/cmr/m/n/10 W mo-du-le gªów-nym, da-lej \T1/cmr/m/it/10 Ma-in\T1/cmr/m/n/10
+ , zo-sta-ªa za-im-ple-men-to-wa-na pod-sta-wo-wa cz¦±¢
+ []
+
+[1] [2] (./SpecImpl.aux) ) 
 Here is how much of TeX's memory you used:
- 970 strings out of 483148
- 14518 string characters out of 5965417
- 244700 words of memory out of 5000000
- 16030 multiletter control sequences out of 15000+600000
- 540001 words of font info for 40 fonts, out of 8000000 for 9000
+ 972 strings out of 483148
+ 14540 string characters out of 5965417
+ 248700 words of memory out of 5000000
+ 16031 multiletter control sequences out of 15000+600000
+ 540687 words of font info for 41 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
  25i,6n,21p,332b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
- </h
-ome/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> 
-</home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600p
-k> </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.6
-00pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm120
-0.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt
-1728.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
-crm1728.600pk>
-Output written on SpecImpl.pdf (2 pages, 41636 bytes).
+ </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfou
+r/jknappen/ec/ecti1000.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/lj
+four/jknappen/ec/ecbx1200.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk
+/ljfour/jknappen/ec/ecbx1440.600pk> </home/natalia/.texlive2019/texmf-var/fonts
+/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/natalia/.texlive2019/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/natalia/.texlive2019/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ectt1728.600pk> </home/natalia/.texlive2019/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on SpecImpl.pdf (3 pages, 68499 bytes).
 PDF statistics:
- 165 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 251 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
