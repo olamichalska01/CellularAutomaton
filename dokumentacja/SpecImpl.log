@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 10:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -49,7 +49,59 @@ Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
 Package: polski 2017/05/04 v1.3.4 Polish language package
 
    Inputenc package detected. Catcodes not changed.
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\@emptytoks=\toks19
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip49
+\f@nch@O@elh=\skip50
+\f@nch@O@erh=\skip51
+\f@nch@O@olh=\skip52
+\f@nch@O@orh=\skip53
+\f@nch@O@elf=\skip54
+\f@nch@O@erf=\skip55
+\f@nch@O@olf=\skip56
+\f@nch@O@orf=\skip57
+)
+(/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count176
 \l__pdf_internal_box=\box45
@@ -57,64 +109,86 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 (./SpecImpl.aux)
 \openout1 = `SpecImpl.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
  (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-3.
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count177
+\scratchdimen=\dimen137
+\scratchbox=\box46
+\nofMPsegments=\count178
+\nofMParguments=\count179
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count180
+\MPscratchDim=\dimen138
+\MPnumerator=\count181
+\makeMPintoPDFobject=\count182
+\everyMPtoPDFconversion=\toks22
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             https://www.ctan.org/pkg/pageslts
+(lastpage)             ! on input line 16.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
+7.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 13.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 13.
- [1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.95886pt too wide) in paragraph at lines 36--40
+Overfull \hbox (0.95886pt too wide) in paragraph at lines 65--69
  \T1/cmr/m/n/10 W mo-du-le gªów-nym, da-lej \T1/cmr/m/it/10 Ma-in\T1/cmr/m/n/10
  , zo-sta-ªa za-im-ple-men-to-wa-na pod-sta-wo-wa cz¦±¢
  []
 
-[1] [2] (./SpecImpl.aux) ) 
+[1] 
+AED: lastpage setting LastPage
+[2] (./SpecImpl.aux) ) 
 Here is how much of TeX's memory you used:
- 972 strings out of 483148
- 14540 string characters out of 5965417
- 248700 words of memory out of 5000000
- 16031 multiletter control sequences out of 15000+600000
- 540687 words of font info for 41 fonts, out of 8000000 for 9000
+ 2371 strings out of 483148
+ 31966 string characters out of 5965417
+ 265411 words of memory out of 5000000
+ 17388 multiletter control sequences out of 15000+600000
+ 539042 words of font info for 34 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 25i,6n,21p,332b,193s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/natalia/.texlive2019/texmf-var/fonts/pk/ljfou
-r/jknappen/ec/ecti1000.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk/lj
-four/jknappen/ec/ecbx1200.600pk> </home/natalia/.texlive2019/texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecbx1440.600pk> </home/natalia/.texlive2019/texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/natalia/.texlive2019/texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/natalia/.texlive2019/texmf-var
-/fonts/pk/ljfour/jknappen/ec/ectt1728.600pk> </home/natalia/.texlive2019/texmf-
-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on SpecImpl.pdf (3 pages, 68499 bytes).
+ 30i,10n,45p,332b,251s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecti1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappe
+n/ec/ecbx1200.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen
+/ec/ecbx1440.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/
+ec/ectt1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecrm1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec
+/ecrm1200.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/
+ecrm2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
+ctt2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
+bx2488.600pk>
+Output written on SpecImpl.pdf (3 pages, 77971 bytes).
 PDF statistics:
- 251 PDF objects out of 1000 (max. 8388607)
- 36 compressed objects within 1 object stream
+ 277 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

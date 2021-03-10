@@ -2,16 +2,45 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[MeX]{polski}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 
-\title{Specyfikacja implementacyjna automatu kom\'orkowego \texttt{GameOfLife}:
-	Gra w \.zycie Johna Conwaya}
-\author{Aleksandra Michalska, Natalia Olszewska}
-\date{09.03.2021}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{ \thepage \hspace{1pt} / \pageref{LastPage}}
+\lhead{Specyfikacja implementacyjna}
+\rhead{\texttt{GameOfLife}}
 
 \begin{document}
+
 \begin{titlepage}
-	\maketitle
+	\begin{center}
+		\vspace*{5cm}
+
+	        \Huge
+        	\textbf{Specyfikacja implemetnacyjna automatu kom\'orkowego}
+
+        	\vspace{1cm}
+	        \Huge
+        	\texttt{GameOfLife}: Gra w \.zycie Johna Conwaya
+
+    		\vspace{1.5cm}
+
+	        \large
+		Aleksandra Michalska, Natalia Olszweska
+
+        	\vfill
+
+	        \vspace{3cm}
+
+
+		\large 09.03.2021
+	\end{center}
 \end{titlepage}
+
+
 
 \section{Informacje og\'olne}
 
