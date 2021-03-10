@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 13:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 13:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -170,7 +170,7 @@ AED: lastpage setting LastPage
 Here is how much of TeX's memory you used:
  2371 strings out of 483148
  31966 string characters out of 5965417
- 265411 words of memory out of 5000000
+ 265512 words of memory out of 5000000
  17388 multiletter control sequences out of 15000+600000
  539042 words of font info for 34 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
@@ -185,7 +185,7 @@ c/ecrm1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec
 ecrm2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
 ctt2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ec
 bx2488.600pk>
-Output written on SpecImpl.pdf (3 pages, 77971 bytes).
+Output written on SpecImpl.pdf (3 pages, 77987 bytes).
 PDF statistics:
  277 PDF objects out of 1000 (max. 8388607)
  44 compressed objects within 1 object stream
