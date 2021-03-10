@@ -2,17 +2,51 @@
 \usepackage[utf8x]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[MeX]{polski}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{ \thepage \hspace{1pt} / \pageref{LastPage}}
+\lhead{Specyfikacja funkcjonalna}
+\rhead{\texttt{GameOfLife}}
 
 \title{Specyfikacja funkcjonalna automatu kom\'orkowego \texttt{GameOfLife}:
 	Gra w \.zycie Johna Conwaya}
 \author{Aleksandra Michalska, Natalia Olszweska}
 \date{09.03.2021}
 
+
 \begin{document}
 
 \begin{titlepage}
-	\maketitle
+	\begin{center}
+		\vspace*{5cm}
+
+	        \Huge
+        	\textbf{Specyfikacja funkcjonalna automatu kom\'orkowego}
+
+        	\vspace{1cm}
+	        \Huge
+        	\texttt{GameOfLife}: Gra w \.zycie Johna Conwaya
+
+    		\vspace{1.5cm}
+
+	        \large
+		Aleksandra Michalska, Natalia Olszweska
+
+        	\vfill
+
+	        \vspace{0.8cm}
+
+
+		\Large \date{09.03.2021}
+	\end{center}
 \end{titlepage}
+
+
 
 \section{Opis og\'olny}
 \subsection{Nazwa programu}
@@ -27,31 +61,61 @@
 \quad Program jest powszechnie dost\k{e}pny oraz dedykowany jest dla ka\.zdego u\.zytkownika.
 
 
+
+
 \section{Opis funkcjonalno\'sci}
 \subsection{Jak ko\.zysta\'c z programu?}
 \subsection{Argumenty wywo\l{}ania programu}
-\subsection{Mo\.zliwo\'sci programu}
-
-\section{Format danych i struktura plik\'ow}
-\subsection{Poj\k{e}cia i pola formularza}
-\subsection{Struktura katalog\'ow}
-\subsection{Przechowywanie danych w programie}
-\subsection{Dane wej\'sciowe}
 Do poprawnego dzia\l{}ania programu potrzebne jest podanie na wej\'sciu nast\k{e}puj\k{a}cych parametr\'ow oraz danych:
 \begin{itemize}
-	\item \texttt{--data filename} nazwa pliku z danymi wej\'sciowymi. W pilku powinny znajdowa\'c si\k{e} nast\k{e}puj\k{a}ce dane: 
+	\item \textbf{\texttt{ -in filein.txt}} nazwa pliku z danymi wej\'sciowymi
+	\item \textbf{\texttt{ -out fileout.txt}} nazwa pliku do kt\'orego zapisywana b\k{e}dzie ko\'ncowa generacja programu
+	\item \textbf{\texttt{ -s(o5 || f5) }}:
 		\begin{itemize}
-			\item ilo\'s\'c wierszy (liczba ca\l{}kowita z zakresu od 3 do 30)
-			\item ilo\'s\'c kolumn (liczba ca\l{}kowita z zakresu od 3 do 30)
+			\item \textbf{\texttt{ -s(o5)}} "save one" - zapisuje jedn\k{a} \texttt{n}- t\k{a} generacj\k{e} obrazu do pilku 
+			\item \textbf{\texttt{ -s(f5)}} "save first" - zapisuje pierwsze \texttt{n} obraz\'ow do plik\'ow
 		\end{itemize}
+	\item \textbf{\texttt{ -m(sbs || fast)}}:
+		\begin{itemize}
+			\item \textbf{\texttt{ -m(sbs)}} "step-by-step mode" - tryb krok po kroku; u\.zytkownik naicskaj\k{a}c dowolny klawisz przechodzi do kolejnej generacji. Istnieje mo\.zliwo\'s\'c przej\'scia z trybu \texttt{\textbf{sbs}} do trybu \texttt{\textbf{fast}} naciskaj\k{a}c klawisz \texttt{\textbf{e}}
+			\item \textbf{\texttt{ -m(fast)}} "fast mode" - tryb szybki; kolejne generacje wy\'swietlaj\k{a} si\k{e} automatycznie.
+		\end{itemize}
+
+\end{itemize}
+\subsection{Dane wej\'sciowe}
+Dane wej\'sciowe s\k{a} przekazywane do programu w pliku tekstowym o rozszerzeniu .txt . W pilku powinny znajdowa\'c si\k{e} nast\k{e}puj\k{a}ce dane: 
+\begin{itemize}
+	\item \texttt{w} ilo\'s\'c wierszy $W = \{ w \in \mathbb{Z} : 3 \leq w \leq 30 \} $
+	\item \texttt{k} ilo\'s\'c kolumn $K = \{ k \in \mathbb{Z} : 3 \leq k \leq 30 \} $
+	\item wype\l{}nienie ka\.zdej kom\'orki: 0(kom\'orka martwa) lub 1(kom\'orka \.zywa)
+		
+		Przykladowe dane z pliku wejsciowego, wype\l{}niaj\k{a}ce tabel\k{e} o 4 wierszach i 4 kolumnach:
+		\begin{table}[h!]
+		\begin{center}
+			\begin{tabular}{c c c c}
+				4 & 4         \\
+				0 & 0 & 1 & 0 \\
+				0 & 1 & 0 & 1 \\
+				1 & 0 & 0 & 0 \\
+				0 & 1 & 1 & 0 \\
+			\end{tabular}
+		\end{center}
+		\end{table}
+
+		Generuj\k{a} poni\.zszy obraz pocz\k{a}tkowy:
+
+		\begin{figure}[h]
+			\centering
+			\includegraphics{obraz}
+		\end{figure}
 \end{itemize}
 
 \subsection{Dane wyj\'sciowe}
 
+
 \section{Scenariusz dzia\l{}ania programu}
 \subsection{Scenariusz og\'olny}
 \subsection{Scenariusz szczeg\'o\l{}owy}
-\subsection{Ekrany dzia\l{}ania programu????????????????}
 \subsection{Komunikaty b\l{}ed\'ow}
 
 
