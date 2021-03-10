@@ -212,7 +212,7 @@ Ten modu\l{} nie powo\l{}uje si\k{e} na inne modu\l{}y.
 
 \subsubsection{MooreFlatWorld}
 
-\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy weg\l{}ug zasad s\k{a}siedztwa Moore'a oraz za\l{}o\.zenia p\l{}askiego \'swiata. 
+\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy wed\l{}ug zasad s\k{a}siedztwa Moore'a oraz za\l{}o\.zenia p\l{}askiego \'swiata. 
 Oznacza to, \.ze \.zywa kom\'orka kt\'ora znajdzie si\k{e} na brzegu planszy umiera.
 
 Funkcja przyjmuje argumenty:
@@ -227,7 +227,7 @@ Funkcja przyjmuje argumenty:
 
 \subsubsection{MooreSphereWorld}
 
-\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy weg\l{}ug zasad s\k{a}siedztwa Moore'a oraz za\l{}o\.zenia kulistego \'swiata.
+\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy wed\l{}ug zasad s\k{a}siedztwa Moore'a oraz za\l{}o\.zenia kulistego \'swiata.
 Oznacza to, \.ze dla kom\'orki znajduj\k{a}cej si\k{e} na brzegu tablicy, s\k{a}siad, kt\'orego szukaliby\'smy poza rozmiarem tablicy b\k{e}dzie pojawia\l{} si\k{e} po przeciwnej stronie tablicy. 
 W ten spos\'ob tablica jest zawijana.
 
@@ -244,7 +244,7 @@ Funkcja przyjmuje argumenty:
 
 \subsubsection{NeumannFlatWorld}
 
-\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy weg\l{}ug zasad s\k{a}siedztwa vun Neumanna'a oraz za\l{}o\.zenia p\l{}askiego \'swiata.
+\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy wed\l{}ug zasad s\k{a}siedztwa vun Neumanna'a oraz za\l{}o\.zenia p\l{}askiego \'swiata.
 
 Funkcja przyjmuje argumenty:
 
@@ -259,7 +259,7 @@ Funkcja przyjmuje argumenty:
 
 \subsubsection{NeumannSphereWorld}
 
-\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy weg\l{}ug zasad s\k{a}siedztwa von Neumanna'a oraz za\l{}o\.zenia kulistego \'swiata.
+\quad Funkcja liczy liczb\k{e} s\k{a}siad\'ow danej kom\'orki przy wed\l{}ug zasad s\k{a}siedztwa von Neumanna'a oraz za\l{}o\.zenia kulistego \'swiata.
 
 Funkcja przyjmuje argumenty:
 
@@ -275,11 +275,60 @@ Funkcja przyjmuje argumenty:
 
 \section{Testowanie}
 
+\subsection{U\.zyte narz\k{e}dzia}
+\quad Szczeg\'oln\k{a} uwag\k{e} przy testach zwr\'ocimy na mazania pami\k{e}ci. 
+W tym celu program zostanie przetestowany przy pomocy dw\'och narz\k{e}dzi: 
+
+\begin{itemize}
+	\item valgrind,
+	\item gdb.
+\end{itemize}
+
+\subsection{Wygl\k{a}d test\'ow}
+\quad Testowanie zostanie zaimplementowane w trakcie tworzenia kawa\l{}k\'ow kodu. 
+Np. W trakcie pisania kodu zostan\k{a}n\k{a} sprawdzone poprawne kontrolowanie i zwracanie kod\'ow b\l{}\k{e}d\'ow.
+
+
+Ponadto niekt\'ore cz\k{e}\'sci programu zostan\k{a} przetestowane w osobnych plikach.
+Np. Zapis obraz\'ow z rozszerzeniem bmp.
+
+\subsection{Najwa\.zniejsze elementy do przestesowania}
+
+\quad Kluczowym elementem w testach programu b\k{e}d\k{a} sprawdziany luk pami\k{e}ci. 
+Przy pomocy narz\k{e}dzi wymienionych w podpunkcie pierwszym zostan\k{a} naprawione uszczerki.
+
+
+Jednak to nie jedyne elementy warte uwagi. Zostan\k{a} przetestowane wszelkie mo\.zliwe b\l{}\k{e}dy w wprowadzaniu danych wej\'sciowych lub te\.z ich pomini\k{e}ciu.
+
+
+Wa\.zna jest r\'ownie\.z poprawa wszelkiej estetyki wy\'swietalnych informacji.
+
+\subsection{Opis test\'ow kluczowych}
+
+\begin{enumerate}
+	\item Sprawdzenie dzia\l{}ania programu w podania poprawych flag i parametr\'ow. Efekt oczekiwany jest znany.
+	\item Sprawdzenie dzia\l{}ania programu w przypadku podania pliku wej\'sciowego bez podanej liczby kolumn/wierszy. Oczekiwana warto\'s\'c: FileError.
+	\item Sprawdzenie dzia\l{}ania programu w przypadku podania pliku wej\'sciowego z b\l{}\k{e}dnymi danymi tablicy. Oczekiwana warto\'s\'c: FileError.
+	\item Sprawdzenie dzia\l{}ania programu w przypadku b\l{}\k{e}dnych flag. Oczekiwana warto\'s\'c: ParametersError.
+	\item Sprawdzenie dzia\l{}ania zapisu obrazu dla trybu "-s o5". Oczekiwana warto\'s\'c: zapis pi\k{a}tej generacji.
+	\item Sprawdzenie dzia\l{}ania zapisu obraz\'ow dla trybu "-s f5". Oczekiwana warto\'s\'c: zapis pierwszych pi\k{e}ciu generacji.
+	\item Sprawdzenie dzia\l{}ania s\k{a}siedztwa dla trybu "-how Ms". Oczekiwana warto\'s\'c: zwr\'ocona liczba s\k{a}siad\'ow.
+	\item Sprawdzenie dzia\l{}ania s\k{a}siedztwa dla trybu "-how Mf". Oczekiwana warto\'s\'c: zwr\'ocona liczba s\k{a}siad\'ow.
+	\item Sprawdzenie dzia\l{}ania s\k{a}siedztwa dla trybu "-how Ns". Oczekiwana warto\'s\'c: zwr\'ocona liczba s\k{a}siad\'ow.
+	\item Sprawdzenie dzia\l{}ania s\k{a}siedztwa dla trybu "-how Nf". Oczekiwana warto\'s\'c: zwr\'ocona liczba s\k{a}siad\'ow.
+	\item Sprawdzenie poprawno\'sci dzia\l{}ania trybu "fast".
+	\item Sprawdzenie poprawno\'sci dzia\l{}ania trybu "sbs". Oczekiwanie na interakcje u\.zytkownik.
+	\item Sprawdzenie poprawno\'sci dzia\l{}ania trybu "sbs". Opcja przej\'scia do trybu "fast".
+
+\end{enumerate}
+
+
 
 \section{Diagram modu\l{}\'ow}
 \begin{figure}[h]
+	
 	\centering
-	\includegraphics{diagram}
+	\includegraphics[scale=1.8]{diagram}
 \end{figure}
 
 \end{document}

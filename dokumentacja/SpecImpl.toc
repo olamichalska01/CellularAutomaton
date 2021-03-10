@@ -24,4 +24,8 @@
 \contentsline {subsubsection}{\numberline {2.6.3}NeumannFlatWorld}{6}%
 \contentsline {subsubsection}{\numberline {2.6.4}NeumannSphereWorld}{6}%
 \contentsline {section}{\numberline {3}Testowanie}{6}%
-\contentsline {section}{\numberline {4}Diagram modu\l {}\'ow}{6}%
+\contentsline {subsection}{\numberline {3.1}U\.zyte narz\k {e}dzia}{6}%
+\contentsline {subsection}{\numberline {3.2}Wygl\k {a}d test\'ow}{7}%
+\contentsline {subsection}{\numberline {3.3}Najwa\.zniejsze elementy do przestesowania}{7}%
+\contentsline {subsection}{\numberline {3.4}Opis test\'ow kluczowych}{7}%
+\contentsline {section}{\numberline {4}Diagram modu\l {}\'ow}{8}%

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 18:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.9)  10 MAR 2021 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -178,19 +178,20 @@ Overfull \hbox (0.95886pt too wide) in paragraph at lines 67--71
  , zo-sta-ªa za-im-ple-men-to-wa-na pod-sta-wo-wa cz¦±¢
  []
 
-[2] [3] [4] [5]
-<diagram.png, id=32, 216.4336pt x 191.21437pt>
+[2] [3] [4] [5] [6]
+<diagram.png, id=36, 216.4336pt x 191.21437pt>
 File: diagram.png Graphic file (type png)
 <use diagram.png>
-Package pdftex.def Info: diagram.png  used on input line 282.
-(pdftex.def)             Requested size: 216.43304pt x 191.2139pt.
+Package pdftex.def Info: diagram.png  used on input line 331.
+(pdftex.def)             Requested size: 389.58014pt x 344.1856pt.
 
+Overfull \hbox (44.58014pt too wide) in paragraph at lines 331--332
+ [][] 
+ []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+[7] 
 AED: lastpage setting LastPage
-[6] [7 <./diagram.png>] (./SpecImpl.aux) ) 
+[8 <./diagram.png>] (./SpecImpl.aux) ) 
 Here is how much of TeX's memory you used:
  2418 strings out of 483148
  32640 string characters out of 5965417
@@ -198,23 +199,23 @@ Here is how much of TeX's memory you used:
  17416 multiletter control sequences out of 15000+600000
  541852 words of font info for 44 fonts, out of 8000000 for 9000
  34 hyphenation exceptions out of 8191
- 30i,10n,45p,332b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/ola/.texlive2019/texmf-var/fo
-nts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/ola/.texlive2019/texmf-var/fon
-ts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/ola/.texlive2019/texmf-var/font
-s/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ola/.texlive2019/texmf-var/fonts
-/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/
-pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/ola/.texlive2019/texmf-var/fonts/p
-k/ljfour/jknappen/ec/ectt1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk
-/ljfour/jknappen/ec/ecrm1000.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/
-ljfour/jknappen/ec/ecrm1200.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecrm2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/lj
-four/jknappen/ec/ectt2488.600pk> </home/ola/.texlive2019/texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecbx2488.600pk>
-Output written on SpecImpl.pdf (8 pages, 128745 bytes).
+ 30i,11n,45p,332b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/natalia/.texlive2019/texmf-var/fo
+nts/pk/ljfour/jknappen/ec/tcrm1000.600pk> </home/natalia/.texlive2019/texmf-var
+/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/natalia/.texlive2019/texmf-
+var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/natalia/.texlive2019/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/natalia/.texlive2019/
+texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/natalia/.texlive20
+19/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/natalia/.texliv
+e2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/natalia/.tex
+live2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/natalia/.
+texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm2488.600pk> </home/natali
+a/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt2488.600pk> </home/nat
+alia/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk>
+Output written on SpecImpl.pdf (9 pages, 134970 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 394 PDF objects out of 1000 (max. 8388607)
+ 67 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
