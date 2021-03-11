@@ -15,10 +15,16 @@ void zamien();
 void zapiszSasiadow();
 int isAlive(int w, int k);
 int checkNeighbor(int w, int k);
+void saveToFile(FILE *file);
+
 
 int main(int argc, char** argv)
 {
-	int howMany = argc > 1 ? atoi(argv[1]) : 10;
+	FILE *saveOutput = fopen(argv[1], "w");
+	
+	if(saveOutput == NULL) return -1;
+
+	int howMany = argc > 2 ? atoi(argv[2]) : 10;
 
 	while(howMany--)
 	{
@@ -27,7 +33,29 @@ int main(int argc, char** argv)
 		zamien();
 	}
 
+	saveToFile(saveOutput);
+	fclose(saveOutput);
+
+
 	return 0;
+}
+
+void saveToFile(FILE *file)
+{
+	int i = 0;
+	int j = 0;
+
+	fprintf(file, "%d %d\n", W, K);
+
+	for(i = 0; i < W; i++)
+	{
+		for(j = 0; j < K; j++)
+		{
+			fprintf(file, "%d ", tab[i][j]);
+		}
+	
+		fprintf(file, "\n");
+	}
 }
 
 void zapiszSasiadow()
@@ -88,7 +116,7 @@ void poka()
 		printf("\n");
 	}
 
-	usleep(300000);
+	sleep(1);
 	
 }
 
