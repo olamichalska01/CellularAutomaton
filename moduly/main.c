@@ -4,7 +4,8 @@
 #include <string.h>
 
 #include "structures.h"
-
+#include "readFromFile.h"
+#include "saveImage.h"
 
 
 int main( int argc, char** argv)
@@ -64,7 +65,7 @@ int main( int argc, char** argv)
 				break;
 
 			default:
-				printf("\n\tParameterError\n\n");
+				printf("\n\tParameterError 1\n\n");
 				return 1;
 			
 		}
@@ -74,21 +75,21 @@ int main( int argc, char** argv)
 	
 	if(howManyParameters < 5 || howManyParameters > 6)
 	{
-		printf("\n\tParameter Error\n\n");
+		printf("\n\tParameter Error 2 %d\n\n", howManyParameters);
 		
 		return 1;
 	}
 
 	if(howManyParameters == 5 && howSave != NULL)
 	{
-		printf("\n\tParameter Error\n\n");
+		printf("\n\tParameter Error 3\n\n");
 
 		return 1;
 	}
 
 	if(input == NULL || output == NULL || numberOfGenerations <= 0 || whichMode == NULL || howCheck == NULL)
 	{
-		printf("\n\tParameter Error\n\n");
+		printf("\n\tParameter Error 4\n\n");
 
                 return 1;
 	}
@@ -111,14 +112,14 @@ int main( int argc, char** argv)
         }
 	else
 	{
-		printf("\n\tParameter Error\n\n");
+		printf("\n\tParameter Error 5\n\n");
 
                 return 1;
 	}
 
 	if(strcmp(whichMode, "sbs") != 0 && strcmp(whichMode, "fast") != 0 )
 	{
-	        printf("\n\tParameter Error\n\n");
+	        printf("\n\tParameter Error 6\n\n");
 
                 return 1;
 
@@ -132,7 +133,7 @@ int main( int argc, char** argv)
 		
 		if(howSave[1] == '0')
 		{
-			printf("\n\tParameter Error\n\n");
+			printf("\n\tParameter Error 7\n\n");
 
                         return 1;
 		}
@@ -147,7 +148,7 @@ int main( int argc, char** argv)
 			}
 			else 
 			{
-				printf("\n\tParameter Error\n\n");
+				printf("\n\tParameter Error 7\n\n");
 		                return 1;
 			}
 
@@ -157,7 +158,7 @@ int main( int argc, char** argv)
 	}
 	else
 	{
-		printf("\n\tParameter Error\n\n");
+		printf("\n\tParameter Error 7\n\n");
 
                 return 1;
 
@@ -167,7 +168,7 @@ int main( int argc, char** argv)
 
 	if(lengthOfWord < 5 || !(input[lengthOfWord - 1] == 't' && input[lengthOfWord - 2] == 'x' && input[lengthOfWord - 3] == 't' 			&& input[lengthOfWord - 4] == '.'))
 	{
-		printf("\n\tParameter Error\n\n");
+		printf("\n\tParameter Error 8\n\n");
 
                 return 1;
 
@@ -177,7 +178,7 @@ int main( int argc, char** argv)
 
         if(lengthOfWord < 5 || !(output[lengthOfWord - 1] == 't' && output[lengthOfWord - 2] == 'x' && output[lengthOfWord - 3] == 't'                     && output[lengthOfWord - 4] == '.'))
         {
-                printf("\n\tParameter Error\n\n");
+                printf("\n\tParameter Error 9\n\n");
 
                 return 1;
 
@@ -194,12 +195,14 @@ int main( int argc, char** argv)
 	printf("\tnrSave %d\n", howManyToSave);
 	printf("\tcharSave %c\n", toSave);
 
-	
-	
-
-		
-
-
+	generation *newGen;
+	printf("sdfasf\n");
+	readFromFile(newGen, input);
+printf("o-O\n");		
+	printFileData(newGen, output);
+	printf("ppppppppp\n");
+	freeArray(newGen);
+printf("sukces\n");
 
 	return 0;
 }
