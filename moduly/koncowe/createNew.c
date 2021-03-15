@@ -34,9 +34,5 @@ generation *New(generation *oldGeneration, neighbour how)
 
 	freeNeighbourhood();	
 
-	oldGeneration = newGeneration;
-
-	freeGeneration(newGeneration);
-
-	return oldGeneration;
+	return newGeneration;
 }

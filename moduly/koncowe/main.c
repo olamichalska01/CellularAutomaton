@@ -186,29 +186,24 @@ int main( int argc, char** argv)
 
         }
 
-
-
-	printf("\tinput %s\n",input);
-        printf("\toutput %s\n",output);
-        printf("\tnumber %d\n",numberOfGenerations);
-        printf("\twhichMode %s\n",whichMode);
-        printf("\thow %s\n",howCheck);
-        printf("\tsave %s\n",howSave);
-	printf("\tnrSave %d\n", howManyToSave);
-	printf("\tcharSave %c\n", toSave);
-
-	generation *A = readGeneration(input);
+	generation *firstGeneration = readGeneration(input);
 
 		
-	printToScreen(A);
+	if(whichMode == "sbs")
+	{
+		firstGeneration = SBS(firstGeneration, numberOfGenerations, howCheckNeighbour, toSave, howManyToSave);
+	}
+	else
+	{
+		firstGeneration = Fast(firstGeneration, numberOfGenerations, howCheckNeighbour, toSave, howManyToSave);
+	}
+
+
 	
-	printToOutput(A, output);
+	printToOutput(firstGeneration, output);
 	
 
-	printf("Marco\n");
-	saveGeneration(A);
-	printf("Polo\n");
-	freeGeneration(A);
+	freeGeneration(firstGeneration);
 	
 
 
