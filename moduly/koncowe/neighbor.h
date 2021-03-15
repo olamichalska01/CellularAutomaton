@@ -2,13 +2,13 @@
 #define NEIGHBOR_H
 
 
-int MooreSphereWorld(int w, int k);
+int MooreSphereWorld(generation *worldGeneration, int row, int column);
 
-int MooreFlatWorld(int w, int k);
+int MooreFlatWorld(generation *worldGeneration, int row, int column);
 
-int NeumannSphereWorld(int w, int k);
+int NeumannSphereWorld(generation *worldGeneration, int row, int column);
 
-int NeumannFlatWorld(int w, int k);
+int NeumannFlatWorld(generation *worldGeneration, int row, int column);
 
 #endif
 

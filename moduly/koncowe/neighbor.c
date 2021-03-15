@@ -1,84 +1,72 @@
 #include "neighbor.h"
-
-int W = 7;
-int K = 35;
-int tab[23][35] = { 
-		    {0},
-       		    {0},	
-		    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 0},
-		    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1},
-		    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1},
-		    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1},
-		    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0},
-                  }; 
+#include "structures.h"
 
 
-
-int MooreSphereWorld(int w, int k)
+int MooreSphereWorld(generation *worldGeneration, int row, int column)
 {       
         int neighbours = 0;
 
-        neighbours += tab[(w + W - 1) % W][k];                   // N
-        neighbours += tab[(w + W + 1) % W][k];                   // S
-        neighbours += tab[w][(k + K - 1) % K];                   // W
-        neighbours += tab[w][(k + K + 1) % K];                   // W
-        neighbours += tab[(w + W - 1) % W][(k + K + 1) % K];     // NE
-        neighbours += tab[(w + W - 1) % W][(k + K - 1) % K];     // NW
-        neighbours += tab[(w + W + 1) % W][(k + K + 1) % K];     // SE
-        neighbours += tab[(w + W + 1) % W][(k + K - 1) % K];     // SW
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r - 1) % worldGeneration -> r][column];                  
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r + 1) % worldGeneration -> r][column];                 
+        neighbours += worldGeneration -> gen[row][(column + worldGeneration -> c - 1) % worldGeneration -> c];                
+        neighbours += worldGeneration -> gen[row][(column + worldGeneration -> c + 1) % worldGeneration -> c];               
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r - 1) % worldGeneration -> r][(column + worldGeneration -> c + 1) % worldGeneration -> c];
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r - 1) % worldGeneration -> r][(column + worldGeneration -> c - 1) % worldGeneration -> c];
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r + 1) % worldGeneration -> r][(column + worldGeneration -> c + 1) % worldGeneration -> c];
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r + 1) % worldGeneration -> r][(column + worldGeneration -> c - 1) % worldGeneration -> c];
 
         return neighbours;
 
 }       
 
-int MooreFlatWorld(int w, int k)
+int MooreFlatWorld(generation *worldGeneration, int row, int column)
 {
 	int neighbours = 0;
         	
-	if(w != 0)	
-		neighbours += tab[w - 1][k];         // N
-	if(w != W - 1)        
-		neighbours += tab[w + 1][k];         // S
-       	if(k != 0)	
-		neighbours += tab[w][k - 1];         // W
-        if(k != K - 1) 	
-		neighbours += tab[w][k + 1];         // E
-	if(w != 0 && k != K - 1)        
-		neighbours += tab[w - 1][k + 1];     // NE
-        if(w != 0 && k != 0)	
-		neighbours += tab[w - 1][k - 1];     // NW
-	if(w != W - 1 && k != K - 1)        
-		neighbours += tab[w + 1][k + 1];     // SE
-        if(w != W - 1 && k != 0)
-		neighbours += tab[w + 1][k - 1];     // SW
+	if(row != 0)	
+		neighbours += worldGeneration -> gen[row - 1][column];         
+	if(row != worldGeneration -> r - 1)        
+		neighbours += worldGeneration -> gen[row + 1][column];         
+       	if(column != 0)	
+		neighbours += worldGeneration -> gen[row][column - 1];         
+        if(column != worldGeneration -> c - 1) 	
+		neighbours += worldGeneration -> gen[row][column + 1];         
+	if(row != 0 && column != worldGeneration -> c - 1)        
+		neighbours += worldGeneration -> gen[row - 1][column + 1];     
+        if(row != 0 && column != 0)	
+		neighbours += worldGeneration -> gen[row - 1][column - 1];     
+	if(row != worldGeneration -> r - 1 && column != worldGeneration -> c - 1)        
+		neighbours += worldGeneration -> gen[row + 1][column + 1];     
+        if(row != worldGeneration -> r - 1 && column != 0)
+		neighbours += worldGeneration -> gen[row + 1][column - 1];     
 	
 	return neighbours;
 }
 
-int NeumannSphereWorld(int w, int k)
+int NeumannSphereWorld(generation *worldGeneration, int row, int column)
 {
         int neighbours = 0;
 
-	neighbours += tab[(w + W - 1) % W][k];                   // N
-        neighbours += tab[(w + W + 1) % W][k];                   // S
-        neighbours += tab[w][(k + K - 1) % K];                   // W
-        neighbours += tab[w][(k + K + 1) % K];                   // E
+	neighbours += worldGeneration -> gen[(row + worldGeneration -> r - 1) % worldGeneration -> r][column];       
+        neighbours += worldGeneration -> gen[(row + worldGeneration -> r + 1) % worldGeneration -> r][column];       
+        neighbours += worldGeneration -> gen[row][(column + worldGeneration -> c - 1) % worldGeneration -> c];       
+        neighbours += worldGeneration -> gen[row][(column + worldGeneration -> c + 1) % worldGeneration -> c];       
 
         return neighbours;
 }
 
-int NeumannFlatWorld(int w, int k)
+int NeumannFlatWorld(generation *worldGeneration, int row, int column)
 {
         int neighbours = 0;
 
-	if(w != 0)
-                neighbours += tab[w - 1][k];         // N
-        if(w != W - 1)
-                neighbours += tab[w + 1][k];         // S
-        if(k != 0)
-                neighbours += tab[w][k - 1];         // W
-        if(k != K - 1)
-                neighbours += tab[w][k + 1];         // E
+	if(row != 0)
+                neighbours += worldGeneration -> gen[row - 1][column];         
+        if(row != worldGeneration -> r - 1)
+                neighbours += worldGeneration -> gen[row + 1][column]; 
+        if(column != 0)
+                neighbours += worldGeneration -> gen[row][column - 1]; 
+        if(column != worldGeneration -> c - 1)
+                neighbours += worldGeneration -> gen[row][column + 1]; 
 
         return neighbours;
 }
