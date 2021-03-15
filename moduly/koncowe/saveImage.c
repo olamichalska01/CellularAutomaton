@@ -23,8 +23,10 @@ void saveGeneration(generation *generationToSave)
   	const int 	MaxColorComponentValue 		= 	255;
   	char		*fileExtention			=	".pgm";
 	char		*whatsInside			= 	"generation";
-	char 		*numToString			=	NULL;
+	char 		*numToString			=	(char*) malloc(sizeof(char));
 	FILE 		*generatedImage;
+//	char		*filename			=	"gen.pgm";
+	unsigned char	data[y_max][x_max];
 
 	sprintf(numToString, "%d", generationToSave -> Nr);
  
@@ -43,7 +45,7 @@ void saveGeneration(generation *generationToSave)
 		      		{
 		      			for(int j = 0; j < sizeOfSquare; j++)
 					{
-						generationToSave -> gen[y + i][x + j] = 200;
+						data[y + i][x + j] = 220;
 					}
 		      		}
       			}
@@ -53,7 +55,7 @@ void saveGeneration(generation *generationToSave)
         			{
               				for(int j = 0; j < sizeOfSquare; j++)
                 			{
-                        			generationToSave -> gen[y + i][x + j] = 55;
+                        			data[y + i][x + j] = 55;
 	                		}
         	      		}
       			}
@@ -64,6 +66,7 @@ void saveGeneration(generation *generationToSave)
 
 	generatedImage = fopen(filename, "wb");
 	fprintf(generatedImage, "P5\n %d\n %d\n %d\n", x_max, y_max, MaxColorComponentValue);
-	fwrite(generationToSave -> gen, sizeof(generationToSave -> gen), 1, generatedImage);
+	fwrite(data, sizeof(data), 1, generatedImage);
 	fclose(generatedImage);
+	free(filename);
 }

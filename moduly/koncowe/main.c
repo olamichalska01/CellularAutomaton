@@ -199,11 +199,15 @@ int main( int argc, char** argv)
 
 	generation *A = readGeneration(input);
 
-	printf("222\n");
+		
 	printToScreen(A);
 	
 	printToOutput(A, output);
+	
 
+	printf("Marco\n");
+	saveGeneration(A);
+	printf("Polo\n");
 	freeGeneration(A);
 	
 
