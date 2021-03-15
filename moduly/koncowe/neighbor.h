@@ -1,6 +1,7 @@
 #ifndef NEIGHBOR_H
 #define NEIGHBOR_H
 
+#include "structures.h"
 
 int MooreSphereWorld(generation *worldGeneration, int row, int column);
 

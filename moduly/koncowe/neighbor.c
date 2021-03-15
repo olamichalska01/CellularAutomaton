@@ -1,5 +1,4 @@
 #include "neighbor.h"
-#include "structures.h"
 
 
 int MooreSphereWorld(generation *worldGeneration, int row, int column)

@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "helpCreate.h"
 #include "manageGenerations.h"
+#include "structures.h"
 
 int Rules(int howManyNeighbours, int isAlive)
 {
-	if(isAlive == 0 && (howManyNeighbours == 2 || howManyNeighbours == 3))
+	if(isAlive == 0 && howManyNeighbours == 3)
 	{
 		return 1;		
 	}
@@ -16,7 +17,7 @@ int Rules(int howManyNeighbours, int isAlive)
 
 }
 
-generation *New(generation *oldGeneration, neighbour how)
+void New(generation *oldGeneration, neighbour how)
 {
 	generation *newGeneration =  createGeneration(oldGeneration -> r, oldGeneration -> c);
 
@@ -24,15 +25,20 @@ generation *New(generation *oldGeneration, neighbour how)
 
 	int **neighbourhood = createNeighbourhood(oldGeneration, how);
 
+	int rr;
+
 	for(int i = 0; i < oldGeneration -> r; i++)
 	{
 		for(int j = 0; j < oldGeneration -> c; j++)
 		{
-			newGeneration -> gen[i][j] = Rules(neighbourhood[i][j], oldGeneration -> gen[i][j]);
+			rr = Rules(neighbourhood[i][j], oldGeneration -> gen[i][j]);
+			newGeneration -> gen[i][j] = rr;
 		}
 	}
 
-	freeNeighbourhood();	
+	oldGeneration = newGeneration;
+	//freeGeneration(newGeneration);
+	freeNeighbourhood(oldGeneration, neighbourhood);	
 
-	return newGeneration;
+//	return newGeneration;
 }

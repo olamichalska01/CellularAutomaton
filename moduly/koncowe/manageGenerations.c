@@ -125,6 +125,3 @@ generation * readGeneration(char* fileName)
 	return GenToRead;
 
 }
-
-
-

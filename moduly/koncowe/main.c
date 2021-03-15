@@ -6,15 +6,13 @@
 #include "structures.h"
 #include "manageGenerations.h"
 #include "saveImage.h"
-
+#include "modes.h"
 
 int main( int argc, char** argv)
 {
 	int 		opt;
 	int 		option_index 			= 	0;
-	FILE 		*filein 			=	NULL;
 	char*		input				=	NULL;
-	FILE 		*fileout 			= 	NULL;
 	char*		output				=	NULL;
 	int 		numberOfGenerations 		= 	0;
 	char* 		howSave				=	NULL;
@@ -189,7 +187,7 @@ int main( int argc, char** argv)
 	generation *firstGeneration = readGeneration(input);
 
 		
-	if(whichMode == "sbs")
+	if(strcmp(whichMode, "sbs") == 0)
 	{
 		firstGeneration = SBS(firstGeneration, numberOfGenerations, howCheckNeighbour, toSave, howManyToSave);
 	}

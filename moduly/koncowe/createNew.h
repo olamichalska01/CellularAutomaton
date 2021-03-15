@@ -3,7 +3,7 @@
 
 int Rules(int howManyNeighbours, int isAlive);
 
-generation *New(generation *oldGeneration, neighbour how);
+void New(generation *oldGeneration, neighbour how);
 
 
 #endif

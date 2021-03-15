@@ -23,7 +23,7 @@ int **createNeighbourhood(generation *whichGeneration, neighbour how)
 			}
 		}
 	}
-	else if(how === Mf)
+	else if(how == Mf)
 	{
 		for(int i = 0; i < rows; i++)
                 {
@@ -60,7 +60,6 @@ int **createNeighbourhood(generation *whichGeneration, neighbour how)
 void freeNeighbourhood(generation *whichGeneration, int **neighbourhood)
 {
 	int rows = whichGeneration -> r;
-        int columns = whichGeneration -> c;
 
 	for(int i = 0; i < rows; i++)
                 free(neighbourhood[i]);
