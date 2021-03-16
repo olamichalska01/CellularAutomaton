@@ -29,8 +29,7 @@ void printGeneration(generation *ToPrint, char *mode)
 	system("clear");
 	printf("\n\t\tGameOfLife\n");
 	printf("\t\tMode in run: %s\n", mode);
-	printf("\n\t\tNumber of generation: %d\n", ToPrint -> Nr);
-	printf("\n\n");	
+	printf("\n\t\tNumber of generation: %d\n\n", ToPrint -> Nr);	
 	
 	for(int i = 0; i < ToPrint -> r; i ++)
 	{
@@ -40,9 +39,9 @@ void printGeneration(generation *ToPrint, char *mode)
 		for(int j = 0; j < ToPrint -> c; j++)
 		{
 			if((ToPrint -> gen[i][j]) == 0) 
-				printf("\u2b1c");
-			else 
 				printf("\u2b1b");
+			else 
+				printf("\u2b1c");
 		}
 		
 		printf("\n");
@@ -80,6 +79,7 @@ generation *Fast(generation *first, int count, neighbour how, char toSave, int h
 		
 		usleep(200000);	
 	}
+	printf("\n\n");
 
 	printf("\n\n");
 
@@ -104,8 +104,13 @@ generation* SBS(generation *first, int count, neighbour how, char toSave, int ho
 			saveGeneration(first);
 		}
 
-		printf("\t\t\tClick key: \n");
-		scanf("%c", &question);
+		if(i < count - 1)
+		{
+			printf("\n\n\t\t\tClick key: ");
+			scanf("%c", &question);
+		}
+		else 
+			printf("\n\n");
 
 		if(question == 'e')
 		{
