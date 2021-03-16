@@ -30,12 +30,12 @@ void printGeneration(generation *ToPrint, char *mode)
 	printf("\n\t\tGameOfLife\n");
 	printf("\t\tMode in run: %s\n", mode);
 	printf("\n\t\tNumber of generation: %d\n", ToPrint -> Nr);
-	
+	printf("\n\n");	
 	
 	for(int i = 0; i < ToPrint -> r; i ++)
 	{
 		
-		printf("\t\t\t");
+		printf("\t\t\t\t");
 		
 		for(int j = 0; j < ToPrint -> c; j++)
 		{
@@ -67,7 +67,7 @@ generation *Fast(generation *first, int count, neighbour how, char toSave, int h
                         saveGeneration(first);
 		}
 
-		//New(first, how); //brooo its fine, ive got this, just work pls
+		New(first, how); //brooo its fine, ive got this, just work pls
 
 		/*if(theSame(last, first))
 		{
@@ -102,12 +102,13 @@ generation* SBS(generation *first, int count, neighbour how, char toSave, int ho
 			saveGeneration(first);
 		}
 
+		printf("\t\t\tClick key: \n");
 		scanf("%c", &question);
 
 		if(question == 'e')
 		{
 			New(first, how);
-			Fast( first, count - i, how, toSave, howManyToSave );
+			Fast( first, count - i - 1, how, toSave, howManyToSave );
 			break;
 		}
 		else

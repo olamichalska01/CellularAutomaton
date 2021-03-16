@@ -19,9 +19,12 @@ int Rules(int howManyNeighbours, int isAlive)
 
 void New(generation *oldGeneration, neighbour how)
 {
-	generation *newGeneration =  createGeneration(oldGeneration -> r, oldGeneration -> c);
+//	generation *newGeneration =  createGeneration(oldGeneration -> r, oldGeneration -> c);
 
-	newGeneration -> Nr = (oldGeneration -> Nr) + 1;
+//	newGeneration -> Nr = (oldGeneration -> Nr) + 1;
+
+
+	oldGeneration -> Nr = (oldGeneration -> Nr) + 1;
 
 	int **neighbourhood = createNeighbourhood(oldGeneration, how);
 
@@ -32,11 +35,11 @@ void New(generation *oldGeneration, neighbour how)
 		for(int j = 0; j < oldGeneration -> c; j++)
 		{
 			rr = Rules(neighbourhood[i][j], oldGeneration -> gen[i][j]);
-			newGeneration -> gen[i][j] = rr;
+			oldGeneration -> gen[i][j] = rr;
 		}
 	}
 
-	oldGeneration = newGeneration;
+	//oldGeneration = newGeneration;
 	//freeGeneration(newGeneration);
 	freeNeighbourhood(oldGeneration, neighbourhood);	
 
