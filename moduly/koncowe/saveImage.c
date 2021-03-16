@@ -22,7 +22,7 @@ void saveGeneration(generation *generationToSave)
   	const int 	y_max 				= 	(generationToSave->r) * sizeOfSquare;
   	const int 	MaxColorComponentValue 		= 	255;
   	char		*fileExtention			=	".pgm";
-	char		*whatsInside			= 	"generation";
+	char		*whatsInside			= 	"./obrazy/generation";
 	char 		*numToString			=	(char*) malloc(sizeof(char));
 	FILE 		*generatedImage;
 //	char		*filename			=	"gen.pgm";

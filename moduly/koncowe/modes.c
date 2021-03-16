@@ -4,7 +4,8 @@
 #include "structures.h"
 #include "saveImage.h"
 #include "createNew.h"
-/*
+#include "manageGenerations.h"
+
 int theSame(generation *one, generation *two)
 {
 	if(one -> r != two -> r)
@@ -22,14 +23,14 @@ int theSame(generation *one, generation *two)
 
 	return 1;
 }
-*/
 
-void printGeneration(generation *ToPrint, char *mode)
+
+void printGeneration(generation *ToPrint, char *mode, int howMany)
 {
 	system("clear");
-	printf("\n\t\tGameOfLife\n");
+	printf("\n\t\t\t\tGameOfLife\n\n");
 	printf("\t\tMode in run: %s\n", mode);
-	printf("\n\t\tNumber of generation: %d\n\n", ToPrint -> Nr);	
+	printf("\n\t\tGeneration number: %d of %d\n\n", ToPrint -> Nr, howMany);	
 	
 	for(int i = 0; i < ToPrint -> r; i ++)
 	{
@@ -49,13 +50,28 @@ void printGeneration(generation *ToPrint, char *mode)
 
 }
 
+void MakeNew(generation *IN, generation * FROM)
+{
+	IN -> r = FROM -> r;
+	IN -> c = FROM -> c;
+	IN -> Nr = FROM -> Nr;
+
+	for(int i = 0; i < IN -> r; i++)
+	{
+		for(int j = 0; j < IN -> c; j++)
+		{
+			IN -> gen[i][j] = FROM -> gen[i][j];
+		}
+	}
+}
+
 generation *Fast(generation *first, int count, neighbour how, char toSave, int howManyToSave)
 {
-	//generation *last;
+	generation *last = createGeneration(first -> r, first -> c);
 
 	for(int i = 0; i < count; i++)
 	{
-		printGeneration(first, "FAST");
+		printGeneration(first, "FAST", count);
 
 		if(toSave == 'o' && (first -> Nr) == howManyToSave)
 		{
@@ -66,22 +82,21 @@ generation *Fast(generation *first, int count, neighbour how, char toSave, int h
                         saveGeneration(first);
 		}
 
+		MakeNew(last,first);
 		New(first, how); //brooo its fine, ive got this, just work pls
 
-		/*if(theSame(last, first))
+		if(theSame(last, first))
 		{
-			printf("\n\nNext generations look the same as  this one\n");
+			printf("\n\n\t\tNext generations look the same as  this one\n");
 			break;
 		}
-		*/
-		//first = last;
-		//freeGeneration(last);
+		
 		
 		usleep(200000);	
 	}
 	printf("\n\n");
 
-	printf("\n\n");
+	freeGeneration(last);
 
 	return first;
 }
@@ -90,11 +105,11 @@ generation* SBS(generation *first, int count, neighbour how, char toSave, int ho
 {
 
 	char question;
-//	generation *Each;
+	generation *Each = createGeneration(first -> r, first -> c);
 	
 	for(int i = 0; i < count; i++)
 	{
-		printGeneration(first, "SBS");
+		printGeneration(first, "SBS", count);
 		if(toSave == 'o' && (first -> Nr) == howManyToSave)
 		{
 			saveGeneration(first);
@@ -120,19 +135,21 @@ generation* SBS(generation *first, int count, neighbour how, char toSave, int ho
 		}
 		else
 		{
+			MakeNew(Each, first);
 			New(first, how);
-//			Each = New(first, how);
-			/*if(theSame(Each, first))
+
+			if(theSame(Each, first))
 			{
-				printf("\n\t\tNext generations look the same as this one\n");
+				printf("\n\n\t\tNext generations look the same as this one\n");
 				break;
 			}
-			*/
-//			first = Each;
+			
+			
 
-//			freeGeneration(Each);
 		}
 	}
-	
+
+	freeGeneration(Each);
+		
 	return first;
 }
