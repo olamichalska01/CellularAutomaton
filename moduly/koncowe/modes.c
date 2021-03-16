@@ -35,7 +35,7 @@ void printGeneration(generation *ToPrint, char *mode)
 	for(int i = 0; i < ToPrint -> r; i ++)
 	{
 		
-		printf("\t\t\t\t");
+		printf("\t\t");
 		
 		for(int j = 0; j < ToPrint -> c; j++)
 		{
@@ -78,8 +78,10 @@ generation *Fast(generation *first, int count, neighbour how, char toSave, int h
 		//first = last;
 		//freeGeneration(last);
 		
-		usleep(300000);	
+		usleep(200000);	
 	}
+
+	printf("\n\n");
 
 	return first;
 }
