@@ -1,2 +1,2 @@
 # projektC
-Tu robimy projekt w C
+Cellular Automaton in C. (first year of college group project)
